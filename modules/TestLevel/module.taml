@@ -1,0 +1,7 @@
+<ModuleDefinition
+   ModuleId="TestLevel"
+   VersionId="1"
+   dependencies="PlatformCharacter=1"
+   ScriptFile="main.cs"
+   CreateFunction="create"
+   DestroyFunction="destroy" />
