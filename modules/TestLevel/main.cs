@@ -18,10 +18,9 @@ function TestLevel::create(%this) {
    if(!isObject(TheScene)) {
       new Scene(TheScene);
       TheScene.setDebugOn("position", "oobb", "collision");
+      TheSceneWindow.setScene(TheScene);
       TestLevel::construct(TheScene);
    }
-
-   TheSceneWindow.setScene(TheScene);
 }
 
 function TestLevel::destroy(%this) {
@@ -43,7 +42,7 @@ function TestLevel::createRect(%w, %h) {
 }
 
 function TestLevel::construct(%scene) {
-   %scene.setGravity(0, -9.8);
+   %scene.setGravity(0, -10);
 
    // Create some platforms.
    %wall = TestLevel::createRect(15, 1);
@@ -58,4 +57,9 @@ function TestLevel::construct(%scene) {
    %buddy = PlatformCharacter::spawn("secondary");
    %buddy.position = "2 2";
    %scene.add(%buddy);
+
+   // Tracking camera
+   TrackingCamera.addToWindow(TheSceneWindow);
+   TrackingCamera.track(%player);
+   TrackingCamera.track(%buddy);
 }
