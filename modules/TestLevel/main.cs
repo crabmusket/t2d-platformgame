@@ -45,17 +45,33 @@ function TestLevel::construct(%scene) {
    %scene.setGravity(0, -10);
 
    // Create some platforms.
-   %wall = TestLevel::createRect(15, 1);
-   %wall.position = "0 -2";
-   %scene.add(%wall);
+   setRandomSeed(getRealTime());
+   %i = 0;
+   %totalWidth = 0;
+   %num = getRandom(10, 30);
+   while(%i < %num) {
+      %width = getRandom(2, 5);
+      %totalWidth += %width;
+      %height = getRandom(1, 6);
+      %walls[%i] = TestLevel::createRect(%width, %height);
+      %scene.add(%walls[%i]);
+      %i++;
+   }
+   %i = 0;
+   %currentX = -1 * %totalWidth/2;
+   while(%i < %num) {
+      %walls[%i].position = %currentX + %walls[%i].getSizeX()/2 SPC %walls[%i].getSizeY()/2;
+      %currentX += %walls[%i].getSizeX();
+      %i++;
+   }
 
    // Main character
    %player = PlatformCharacter::spawn("primary");
-   %player.position = "0 2";
+   %player.position = 0 SPC %walls[mFloor(%num/2)].getSizeY() + 2;
    %scene.add(%player);
    // And another
    %buddy = PlatformCharacter::spawn("secondary");
-   %buddy.position = "2 2";
+   %buddy.position = 2 SPC %walls[mFloor(%num/2)].getSizeY() + 2;
    %scene.add(%buddy);
 
    // Tracking camera
