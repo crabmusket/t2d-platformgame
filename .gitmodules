@@ -4,3 +4,6 @@
 [submodule "modules/PlatformCharacter"]
 	path = modules/PlatformCharacter
 	url = git@github.com:eightyeight/t2d-platformcharacter.git
+[submodule "modules/Damage"]
+	path = modules/Damage
+	url = ./module/Damage
