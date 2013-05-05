@@ -17,7 +17,7 @@ function TestLevel::create(%this) {
 
    if(!isObject(TheScene)) {
       new Scene(TheScene);
-      TheScene.setDebugOn("position", "oobb", "collision");
+      TheScene.setDebugOn("oobb", "collision");
       TheSceneWindow.setScene(TheScene);
       TestLevel::construct(TheScene);
    }
