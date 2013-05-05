@@ -8,10 +8,12 @@ Currently, these are:
 
  * [t2d-platformcharacter][] A physical 2D platformer character behavior.
  * [t2d-trackingcamera][] A more fully-featured camera tracking solution.
+ * [t2d-damage][] A flexible damage effect system.
 
   [Torque 2D]: https://github.com/GarageGames/Torque2D
   [t2d-platformcharacter]: https://github.com/eightyeight/t2d-platformcharacter
   [t2d-trackingcamera]: https://github.com/eightyeight/t2d-trackingcamera
+  [t2d-damage]: https://github.com/eightyeight/t2d-damage
 
 # Getting the game
 
