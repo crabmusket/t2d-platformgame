@@ -10,10 +10,9 @@ Currently, these are:
  * [t2d-trackingcamera][] A more fully-featured camera tracking solution.
  * [t2d-damage][] A flexible damage effect system.
 
-  [Torque 2D]: https://github.com/GarageGames/Torque2D
-  [t2d-platformcharacter]: https://github.com/eightyeight/t2d-platformcharacter
-  [t2d-trackingcamera]: https://github.com/eightyeight/t2d-trackingcamera
-  [t2d-damage]: https://github.com/eightyeight/t2d-damage
+[![Basic features so far](http://img.youtube.com/vi/NRLBf25_L1o/0.jpg)][video]
+
+_Click to see a video of the current gameplay features_
 
 # Getting the game
 
@@ -28,3 +27,9 @@ git submodule update
 
 You'll then need to copy and paste the Torque2D executable (and DLLs on Windows) from somewhere.
 The game is built against the `development` branch, but it should work with `master` branch releases.
+
+[Torque 2D]: https://github.com/GarageGames/Torque2D
+[t2d-platformcharacter]: https://github.com/eightyeight/t2d-platformcharacter
+[t2d-trackingcamera]: https://github.com/eightyeight/t2d-trackingcamera
+[t2d-damage]: https://github.com/eightyeight/t2d-damage
+[video]: http://www.youtube.com/watch?v=NRLBf25_L1o
